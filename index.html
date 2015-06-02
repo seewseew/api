@@ -334,6 +334,136 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
+<h2 id="register-validation">Register Validation</h2>
+
+<blockquote>
+<p>Request Send Register Data</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/customers/pre-register
+  -X POST
+  -H <span class="s2">"Content-Type: application/json"</span>
+  -d <span class="s1">'{
+         "otpNumber":"{otpNumber}",
+         "thaiId":"3670301396484",
+         "email":"megaspeed@example.com",
+         "mobile":"0879630303",
+         "password":"123456",
+         "firstName":"ฝอย",
+         "lastName":"ขัดหม้อ",
+         "birthDate":"03/04/2015",
+         "registerChannel":"MOBILE",
+         "title":{
+            "id":1
+         }
+      }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<p>http status 200</p>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/customers/pre-register</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>otpNumber</td>
+<td>String</td>
+<td><a href="#send-otp">Send OTP</a></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>thaiId</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>email</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>mobile</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>password</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>firstName</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>lastName</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>birthDate</td>
+<td>Date</td>
+<td>Format : dd/MM/yyyy</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>registerChannel</td>
+<td>String</td>
+<td>Accept : MOBILE,WEB,CALL</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>title</td>
+<td>Object</td>
+<td>see. Title Object table</td>
+</tr>
+</tbody></table>
+
+<h3 id="title-object">Title Object</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>id</td>
+<td>Number</td>
+<td>1=Mr. 2=Mrs. 3=Ms. 4=Mstr. 5=Miss</td>
+</tr>
+</tbody></table>
+
 <h2 id="get-profile">Get Profile</h2>
 
 <blockquote>
@@ -476,6 +606,60 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <h2 id="verify-otp">Verify OTP</h2>
 
 <h2 id="change-password">Change Password</h2>
+
+<h2 id="validate-email-for-update">Validate Email for update</h2>
+
+<blockquote>
+<p>Request Validate Email</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/pre-update-email/
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -d <span class="s1">'{
+        "email" : "a@a.com",
+        "password" : "1234"
+    }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<p>http status 200</p>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/pre-update-email/</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>email</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>password</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
