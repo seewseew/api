@@ -660,6 +660,121 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
+<h2 id="all-titles">All Titles</h2>
+
+<blockquote>
+<p>Request Get All Titles</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/titles
+  -X GET
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นาย"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นาง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mrs."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นางสาว"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"เด็กชาย"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mstr."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"เด็กหญิง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Miss"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/titles</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>access token from <a href="#authentication">Authentication</a></td>
+</tr>
+</tbody></table>
+
+<h2 id="title">Title</h2>
+
+<blockquote>
+<p>Request Get Title by ID</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/titles/1
+  -X GET
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นาย"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MALE"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/titles/{1}</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>access token from <a href="#authentication">Authentication</a></td>
+</tr>
+<tr>
+<td>PATH</td>
+<td>id</td>
+<td>Number</td>
+<td></td>
+</tr>
+</tbody></table>
+
 <h1 id="forgot-password">Forgot Password</h1>
 
 <h2 id="find-mobile">Find Mobile</h2>
