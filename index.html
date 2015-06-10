@@ -843,7 +843,6 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </blockquote>
 <pre class="highlight shell"><code>curl https://api.cpone-dev.com/forgotpassword/0812345678/findmobile
   -X GET
-  -H <span class="s2">"Authorization: bearer {access_token}"</span>
 </code></pre>
 
 <blockquote>
@@ -866,12 +865,6 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </thead><tbody>
 <tr>
-<td>HEAD</td>
-<td>Authorization</td>
-<td>String</td>
-<td>access token from <a href="#authentication">Authentication</a></td>
-</tr>
-<tr>
 <td>PATH</td>
 <td>cponeId</td>
 <td>String</td>
@@ -886,7 +879,6 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </blockquote>
 <pre class="highlight shell"><code>curl https://api.cpone-dev.com/forgotpassword/verifyotp
   -X POST
-  -H <span class="s2">"Authorization: bearer {access_token}"</span>
   -H <span class="s2">"Content-Type: application/json"</span>   
   -d <span class="s1">'{            
         "mobile" : "{mobile number from find mobile}",
@@ -912,12 +904,6 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <th>Detail</th>
 </tr>
 </thead><tbody>
-<tr>
-<td>HEAD</td>
-<td>Authorization</td>
-<td>String</td>
-<td>access token from <a href="#authentication">Authentication</a></td>
-</tr>
 <tr>
 <td>HEAD</td>
 <td>Content-Type</td>
