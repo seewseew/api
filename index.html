@@ -775,11 +775,168 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
+<h2 id="update-password">Update password</h2>
+
+<blockquote>
+<p>Request Update password</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/update-password
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
+  -d <span class="s1">'{
+           "oldPassword" : "password",
+           "newPassword" : "newpassword"
+        }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/update-password</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>access token from <a href="#authentication">Authentication</a></td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>oldPassword</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>newPassword</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody></table>
+
 <h1 id="forgot-password">Forgot Password</h1>
 
 <h2 id="find-mobile">Find Mobile</h2>
 
+<blockquote>
+<p>Request Find Mobile</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/forgotpassword/0812345678/findmobile
+  -X GET
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+</code></pre>
+
+<blockquote>
+<p>Response
+0812345678</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/forgotpassword/{cponeId}/findmobile</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>access token from <a href="#authentication">Authentication</a></td>
+</tr>
+<tr>
+<td>PATH</td>
+<td>cponeId</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody></table>
+
 <h2 id="verify-otp">Verify OTP</h2>
+
+<blockquote>
+<p>Request Verify OTP</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/forgotpassword/verifyotp
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>   
+  -d <span class="s1">'{            
+        "mobile" : "{mobile number from find mobile}",
+        "otpNumber" : "{otp number}"        
+    }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/forgotpassword/verifyotp</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>access token from <a href="#authentication">Authentication</a></td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>mobile</td>
+<td>Number</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>otpNumber</td>
+<td>Number</td>
+<td></td>
+</tr>
+</tbody></table>
 
 <h2 id="change-password">Change Password</h2>
 
@@ -833,6 +990,45 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>password</td>
 <td>String</td>
 <td></td>
+</tr>
+</tbody></table>
+
+<h2 id="upload-receipt-image">Upload Receipt Image</h2>
+
+<blockquote>
+<p>Request Upload Receipt Image</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/upload-receipt
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -F <span class="s2">"file=@{file}"</span>
+</code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/upload-receipt</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>access token from <a href="#authentication">Authentication</a></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>file</td>
+<td>File</td>
+<td>image file for upload</td>
 </tr>
 </tbody></table>
 
