@@ -683,7 +683,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>HEAD</td>
 <td>Authorization</td>
 <td>String</td>
-<td>access token from <a href="#authentication">Authentication</a></td>
+<td>Access token from <a href="#authentication">Authentication</a></td>
 </tr>
 </tbody></table>
 
@@ -715,9 +715,22 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>POST</td>
 <td>mobile</td>
 <td>String</td>
-<td></td>
+<td>Numeric 10 digits.</td>
 </tr>
 </tbody></table>
+
+<h3 id="response">Response</h3>
+
+<h4 id="error-example">Error Example</h4>
+
+<p>{
+  &ldquo;violations&rdquo; : [ {
+    &ldquo;code&rdquo; : &ldquo;SIZ-10070&rdquo;,
+    &ldquo;field&rdquo; : &ldquo;request.mobile&rdquo;,
+    &ldquo;message&rdquo; : &ldquo;จำนวนตัวเลขเบอร์โทรศัพท์ไม่ถูกต้อง (10 หลัก)&rdquo;
+  } ],
+  &ldquo;error&rdquo; : &ldquo;Validation Failure&rdquo;
+}</p>
 
 <h1 id="customer">Customer</h1>
 
@@ -735,8 +748,8 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
          "email":"megaspeed@example.com",
          "mobile":"0879630303",
          "password":"123456",
-         "firstName":"ฝอย",
-         "lastName":"ขัดหม้อ",
+         "firstName":"กุ๊ก",
+         "lastName":"กิ๊ก",
          "birthDate":"03/04/2015",
          "registerChannel":"MOBILE",
          "title":{
@@ -779,55 +792,55 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>POST</td>
 <td>thaiId</td>
 <td>String</td>
-<td></td>
+<td>Numeric 13 digits.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>email</td>
 <td>String</td>
-<td></td>
+<td>*Optional parameter.<br/>Standard email format.<br/>Max 100 characters.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>mobile</td>
 <td>String</td>
-<td></td>
+<td>Numeric 10 digits.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>password</td>
 <td>String</td>
-<td></td>
+<td>Allowed characters: A-Z, a-z, 0-9</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>firstName</td>
 <td>String</td>
-<td></td>
+<td>Thai or English characters.<br/>Max 50 characters.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>lastName</td>
 <td>String</td>
-<td></td>
+<td>Thai or English characters.<br/>Max 50 characters.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>birthDate</td>
 <td>Date</td>
-<td>Format : dd/MM/yyyy</td>
+<td>Format: dd/MM/yyyy</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>registerChannel</td>
 <td>String</td>
-<td>Accept : MOBILE,WEB,CALL</td>
+<td>Accept: MOBILE, WEB, CALL</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>title</td>
 <td>Object</td>
-<td>see. Title Object table</td>
+<td>See: Title Object table.</td>
 </tr>
 </tbody></table>
 
@@ -935,55 +948,55 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>POST</td>
 <td>thaiId</td>
 <td>String</td>
-<td></td>
+<td>Numeric 13 digits.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>email</td>
 <td>String</td>
-<td></td>
+<td>*Optional parameter.<br/>Standard email format.<br/>Max 100 characters.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>mobile</td>
 <td>String</td>
-<td></td>
+<td>Numeric 10 digits.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>password</td>
 <td>String</td>
-<td></td>
+<td>Allowed characters: A-Z, a-z, 0-9</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>firstName</td>
 <td>String</td>
-<td></td>
+<td>Thai or English characters.<br/>Max 50 characters.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>lastName</td>
 <td>String</td>
-<td></td>
+<td>Thai or English characters.<br/>Max 50 characters.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>birthDate</td>
 <td>Date</td>
-<td>Format : dd/MM/yyyy</td>
+<td>Format: dd/MM/yyyy</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>registerChannel</td>
 <td>String</td>
-<td>Accept : MOBILE,WEB,CALL</td>
+<td>Accept: MOBILE,WEB,CALL</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>title</td>
 <td>Object</td>
-<td>see. Title Object table</td>
+<td>See: Title Object table.</td>
 </tr>
 </tbody></table>
 
@@ -1065,7 +1078,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>HEAD</td>
 <td>Authorization</td>
 <td>String</td>
-<td>access token from <a href="#authentication">Authentication</a></td>
+<td>Access token from <a href="#authentication">Authentication</a></td>
 </tr>
 </tbody></table>
 
@@ -1097,7 +1110,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>HEAD</td>
 <td>Authorization</td>
 <td>String</td>
-<td>access token from <a href="#authentication">Authentication</a></td>
+<td>Access token from <a href="#authentication">Authentication</a></td>
 </tr>
 </tbody></table>
 
@@ -1130,20 +1143,20 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>HEAD</td>
 <td>Authorization</td>
 <td>String</td>
-<td>access token from <a href="#authentication">Authentication</a></td>
+<td>Access token from <a href="#authentication">Authentication</a></td>
 </tr>
 <tr>
 <td>POST</td>
 <td>file</td>
 <td>File</td>
-<td>image file for upload</td>
+<td>Max file size 3 MB<br/>Allowed extension: &ldquo;.png&rdquo;, &ldquo;.jpg&rdquo;, &ldquo;.jpeg&rdquo;</td>
 </tr>
 </tbody></table>
 
-<h2 id="update-password">Update password</h2>
+<h2 id="update-password">Update Password</h2>
 
 <blockquote>
-<p>Request Update password</p>
+<p>Request Update Password</p>
 </blockquote>
 <pre class="highlight shell"><code>curl https://api.cpone-dev.com/update-password
   -X POST
@@ -1177,7 +1190,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>HEAD</td>
 <td>Authorization</td>
 <td>String</td>
-<td>access token from <a href="#authentication">Authentication</a></td>
+<td>Access token from <a href="#authentication">Authentication</a></td>
 </tr>
 <tr>
 <td>HEAD</td>
@@ -1195,7 +1208,89 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>POST</td>
 <td>newPassword</td>
 <td>String</td>
-<td></td>
+<td>Must not be closely similar to a previously used password.<br/>Allowed characters: A-Z, a-z, 0-9</td>
+</tr>
+</tbody></table>
+
+<h2 id="update-profile">Update Profile</h2>
+
+<blockquote>
+<p>Request Update Profile</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/update-profile
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
+  -d <span class="s1">'{
+        "firstName" : "กุ๊ก",
+        "lastName" : "กิ๊ก",
+        "birthDate" : "12/03/2015",
+        "phone" : "021234567",
+        "title" : {
+                "id" : 2
+        }
+    }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/update-profile</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>Access token from <a href="#authentication">Authentication</a></td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>firstName</td>
+<td>String</td>
+<td>Thai or English characters.<br/>Max 50 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>lastName</td>
+<td>String</td>
+<td>Thai or English characters.<br/>Max 50 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>birthDate</td>
+<td>Date</td>
+<td>Format: dd/MM/yyyy</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>phone</td>
+<td>String</td>
+<td>Max 20 digits.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>title</td>
+<td>Object</td>
+<td>See: Title Object table.</td>
 </tr>
 </tbody></table>
 
@@ -1291,7 +1386,64 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 
 <h2 id="change-password">Change Password</h2>
 
-<h2 id="update-email-validation">Update Email Validation</h2>
+<blockquote>
+<p>Request Change Password</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/forgotpassword/changepassword/
+  -X POST
+  -H <span class="s2">"Content-Type: application/json"</span>   
+  -d <span class="s1">'{
+        "mobile" : "{mobile number}",
+        "otpNumber" : "{opt number}",
+        "password" : "{new password}"
+    }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/forgotpassword/changepassword/</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>mobile</td>
+<td>Number</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>otpNumber</td>
+<td>Number</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>password</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h1 id="update-email-validation">Update Email Validation</h1>
 
 <blockquote>
 <p>Request Update Email Validation</p>
@@ -1344,7 +1496,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
-<h2 id="upload-receipt-image">Upload Receipt Image</h2>
+<h1 id="upload-receipt-image">Upload Receipt Image</h1>
 
 <blockquote>
 <p>Request Upload Receipt Image</p>
@@ -1379,7 +1531,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>POST</td>
 <td>file</td>
 <td>File</td>
-<td>image file for upload</td>
+<td>Max file size 3 MB<br/>Allowed extension: &ldquo;.png&rdquo;, &ldquo;.jpg&rdquo;, &ldquo;.jpeg&rdquo;</td>
 </tr>
 </tbody></table>
 
