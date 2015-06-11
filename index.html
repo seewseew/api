@@ -32,7 +32,487 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="authentication">Authentication</h1>
+        <h1 id="master-data">Master Data</h1>
+
+<h2 id="all-titles">All Titles</h2>
+
+<blockquote>
+<p>Request Get All Titles</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/public/titles
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นาย"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นาง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mrs."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นางสาว"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"เด็กชาย"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mstr."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"เด็กหญิง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Miss"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/public/titles</code></p>
+
+<h2 id="title">Title</h2>
+
+<blockquote>
+<p>Request Get Title by ID</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/public/titles/1
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นาย"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MALE"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/public/titles/{id}</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PATH</td>
+<td>id</td>
+<td>Number</td>
+<td>The title id.</td>
+</tr>
+</tbody></table>
+
+<h2 id="all-provinces">All Provinces</h2>
+
+<blockquote>
+<p>Request Get All Provinces</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/public/provinces
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"กรุงเทพฯ"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นครปฐม"</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/public/provinces</code></p>
+
+<aside class="notice">
+All Provinces sort by name
+</aside>
+
+<h2 id="province">Province</h2>
+
+<blockquote>
+<p>Request Get Province by ID</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/public/provinces/1
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"กรุงเทพฯ"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/public/provinces/{id}</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PATH</td>
+<td>id</td>
+<td>Number</td>
+<td>The province id.</td>
+</tr>
+</tbody></table>
+
+<h2 id="all-districts-in-province">All Districts in Province</h2>
+
+<blockquote>
+<p>Request Get All Districts by Province ID</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/public/provinces/1/districts
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ดินแดง"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ห้วยขวาง"</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/public/provinces/{id}/districts</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PATH</td>
+<td>id</td>
+<td>Number</td>
+<td>The province id.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All Districts sort by name
+</aside>
+
+<h2 id="all-districts">All Districts</h2>
+
+<blockquote>
+<p>Request Get All Districts</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/public/districts
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ดินแดง"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"พุทธมณฑล"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"สามพราน"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ห้วยขวาง"</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/public/districts</code></p>
+
+<aside class="notice">
+All Districts sort by name
+</aside>
+
+<h2 id="district">District</h2>
+
+<blockquote>
+<p>Request Get District by ID</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/public/districts/1
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ดินแดง"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/public/districts/{id}</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PATH</td>
+<td>id</td>
+<td>Number</td>
+<td>The district id.</td>
+</tr>
+</tbody></table>
+
+<h2 id="all-sub-districts-in-district">All Sub-Districts in District</h2>
+
+<blockquote>
+<p>Request Get All Sub-Districts by District ID</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/public/districts/1/subdistricts
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ดินแดง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"10400"</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/public/districts/{id}/subdistricts</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PATH</td>
+<td>id</td>
+<td>Number</td>
+<td>The district id.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All Sub-Districts sort by name
+</aside>
+
+<h2 id="all-sub-districts">All Sub-Districts</h2>
+
+<blockquote>
+<p>Request Get All Sub-Districts</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/public/subdistricts
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"กระทุ่มล้ม"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73220"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"คลองจินดา"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73110"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"คลองโยง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73170"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"คลองใหม่"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73110"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ดินแดง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"10400"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ตลาดจินดา"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73110"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ทรงคนอง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73210"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ท่าข้าม"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73110"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ท่าตลาด"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73110"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"บางกระทึก"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73210"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"บางกะปิ"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"10310"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"บางช้าง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73110"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"บางเตย"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73210"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"บ้านใหม่"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73110"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"มหาสวัสดิ์"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73170"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ยายชา"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73110"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ศาลายา"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73170"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"สามพราน"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73110"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"สามเสนนอก"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"10310"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"หอมเกร็ด"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73110"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ห้วยขวาง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"10310"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"อ้อมใหญ่"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73160"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ไร่ขิง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"73210"</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/public/subdistricts</code></p>
+
+<aside class="notice">
+All Sub-Districts sort by name
+</aside>
+
+<h2 id="sub-district">Sub-District</h2>
+
+<blockquote>
+<p>Request Get Sub-District by ID</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/public/subdistricts/1
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ดินแดง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"10400"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/public/subdistricts/{id}</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PATH</td>
+<td>id</td>
+<td>Number</td>
+<td>The sub-district id.</td>
+</tr>
+</tbody></table>
+
+<h1 id="authentication">Authentication</h1>
 
 <h2 id="get-token">Get Token</h2>
 
@@ -660,121 +1140,6 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
-<h2 id="all-titles">All Titles</h2>
-
-<blockquote>
-<p>Request Get All Titles</p>
-</blockquote>
-<pre class="highlight shell"><code>curl https://api.cpone-dev.com/titles
-  -X GET
-  -H <span class="s2">"Authorization: bearer {access_token}"</span>
-</code></pre>
-
-<blockquote>
-<p>Response</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นาย"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr."</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MALE"</span><span class="w">
-</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นาง"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mrs."</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
-</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นางสาว"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms."</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
-</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"เด็กชาย"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mstr."</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MALE"</span><span class="w">
-</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"เด็กหญิง"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Miss"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
-</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
-
-</span></code></pre>
-
-<h3 id="request">Request</h3>
-
-<p><code class="prettyprint">GET https://api.cpone-dev.com/titles</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>TYPE</th>
-<th>Params</th>
-<th>Value</th>
-<th>Detail</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>HEAD</td>
-<td>Authorization</td>
-<td>String</td>
-<td>access token from <a href="#authentication">Authentication</a></td>
-</tr>
-</tbody></table>
-
-<h2 id="title">Title</h2>
-
-<blockquote>
-<p>Request Get Title by ID</p>
-</blockquote>
-<pre class="highlight shell"><code>curl https://api.cpone-dev.com/titles/1
-  -X GET
-  -H <span class="s2">"Authorization: bearer {access_token}"</span>
-</code></pre>
-
-<blockquote>
-<p>Response</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นาย"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr."</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MALE"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-
-</span></code></pre>
-
-<h3 id="request">Request</h3>
-
-<p><code class="prettyprint">GET https://api.cpone-dev.com/titles/{1}</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>TYPE</th>
-<th>Params</th>
-<th>Value</th>
-<th>Detail</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>HEAD</td>
-<td>Authorization</td>
-<td>String</td>
-<td>access token from <a href="#authentication">Authentication</a></td>
-</tr>
-<tr>
-<td>PATH</td>
-<td>id</td>
-<td>Number</td>
-<td></td>
-</tr>
-</tbody></table>
-
 <h2 id="update-password">Update password</h2>
 
 <blockquote>
@@ -785,9 +1150,9 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
   -H <span class="s2">"Authorization: bearer {access_token}"</span>
   -H <span class="s2">"Content-Type: application/json"</span>
   -d <span class="s1">'{
-           "oldPassword" : "password",
-           "newPassword" : "newpassword"
-        }'</span>
+        "oldPassword" : "password",
+        "newPassword" : "newpassword"
+    }'</span>
 </code></pre>
 
 <blockquote>
