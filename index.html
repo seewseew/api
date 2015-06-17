@@ -1294,6 +1294,146 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
+<h2 id="update-address">Update Address</h2>
+
+<blockquote>
+<p>Request Update Address</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/update-address
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
+  -d <span class="s1">'{
+            "houseNo" : "11/12",
+            "villageNo" : "8",
+            "buildingVillage" : "ตึก AIA Capital Center",
+            "laneAlley" : "รัชดาซอย 4",
+            "road" : "ถนนรัชดาภิเษก",
+            "provinceId" : 1,
+            "districtId" : 1,
+            "subDistrictId" : 1,
+            "postCode" : "76543",
+            "addressType" : "ID_CARD_ADDRESS"
+    }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response
+<code class="prettyprint">json
+{
+    &quot;id&quot;: 4,
+    &quot;houseNo&quot;: &quot;11/12&quot;,
+    &quot;villageNo&quot;: &quot;8&quot;,
+    &quot;buildingVillage&quot;: &quot;ตึก AIA Capital Center&quot;,
+    &quot;laneAlley&quot;: &quot;รัชดาซอย 4&quot;,
+    &quot;road&quot;: &quot;ถนนรัชดาภิเษก&quot;,
+    &quot;province&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;กรุงเทพฯ&quot;
+    },
+    &quot;district&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;ดินแดง&quot;
+    },
+    &quot;subDistrict&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;ดินแดง&quot;,
+        &quot;postCode&quot;: &quot;10400&quot;
+    },
+    &quot;postCode&quot;: &quot;76543&quot;,
+    &quot;addressType&quot;: &quot;ID_CARD_ADDRESS&quot;
+}
+</code></p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/update-address</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>Access token from <a href="#authentication">Authentication</a></td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>houseNo</td>
+<td>String</td>
+<td>Required.<br/>Max 10 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>villageNo</td>
+<td>String</td>
+<td>Max 10 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>buildingVillage</td>
+<td>String</td>
+<td>Max 50 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>laneAlley</td>
+<td>String</td>
+<td>Max 50 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>road</td>
+<td>String</td>
+<td>Max 50 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>provinceId</td>
+<td>Number</td>
+<td>Required.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>districtId</td>
+<td>Number</td>
+<td>Required.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>subDistrictId</td>
+<td>Number</td>
+<td>Required.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>postCode</td>
+<td>String</td>
+<td>Required.<br/>Numeric 5 digits.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>addressType</td>
+<td>String</td>
+<td>Required.<br/>Accept: ID_CARD_ADDRESS, SHIPPING_ADDRESS</td>
+</tr>
+</tbody></table>
+
 <h1 id="forgot-password">Forgot Password</h1>
 
 <h2 id="find-mobile">Find Mobile</h2>
