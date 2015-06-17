@@ -1456,6 +1456,112 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
+<h2 id="update-email-validation">Update Email Validation</h2>
+
+<blockquote>
+<p>Request Update Email Validation</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/pre-update-email
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
+  -d <span class="s1">'{
+        "email" : "a@a.com",
+        "password" : "1234"
+    }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/pre-update-email</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>email</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>password</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="update-email">Update Email</h2>
+
+<blockquote>
+<p>Request Update Email</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/update-email
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
+  -d <span class="s1">'{
+        "email" : "a@a.com",
+        "password" : "1234"
+    }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/update-email</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>email</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>password</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody></table>
+
 <h1 id="forgot-password">Forgot Password</h1>
 
 <h2 id="find-mobile">Find Mobile</h2>
@@ -1595,59 +1701,6 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>POST</td>
 <td>otpNumber</td>
 <td>Number</td>
-<td></td>
-</tr>
-<tr>
-<td>POST</td>
-<td>password</td>
-<td>String</td>
-<td></td>
-</tr>
-</tbody></table>
-
-<h1 id="update-email-validation">Update Email Validation</h1>
-
-<blockquote>
-<p>Request Update Email Validation</p>
-</blockquote>
-<pre class="highlight shell"><code>curl https://api.cpone-dev.com/pre-update-email/
-  -X POST
-  -H <span class="s2">"Authorization: bearer {access_token}"</span>
-  -H <span class="s2">"Content-Type: application/json"</span>
-  -d <span class="s1">'{
-        "email" : "a@a.com",
-        "password" : "1234"
-    }'</span>
-</code></pre>
-
-<blockquote>
-<p>Response</p>
-</blockquote>
-
-<h3 id="request">Request</h3>
-
-<p><code class="prettyprint">POST https://api.cpone-dev.com/pre-update-email/</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>TYPE</th>
-<th>Params</th>
-<th>Value</th>
-<th>Detail</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>HEAD</td>
-<td>Content-Type</td>
-<td>String</td>
-<td>Fix value to &ldquo;application/json&rdquo;</td>
-</tr>
-<tr>
-<td>POST</td>
-<td>email</td>
-<td>String</td>
 <td></td>
 </tr>
 <tr>
