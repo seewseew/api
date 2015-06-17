@@ -743,17 +743,17 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
   -X POST
   -H <span class="s2">"Content-Type: application/json"</span>
   -d <span class="s1">'{
-         "otpNumber":"{otpNumber}",
-         "thaiId":"3670301396484",
-         "email":"megaspeed@example.com",
-         "mobile":"0879630303",
-         "password":"123456",
-         "firstName":"กุ๊ก",
-         "lastName":"กิ๊ก",
-         "birthDate":"03/04/2015",
-         "registerChannel":"MOBILE",
-         "title":{
-            "id":1
+         "otpNumber" : "{otpNumber}",
+         "thaiId" : "3670301396484",
+         "email" : "megaspeed@example.com",
+         "mobile" : "0879630303",
+         "password" : "123456",
+         "firstName" : "กุ๊ก",
+         "lastName" : "กิ๊ก",
+         "birthDate" : "03/04/2015",
+         "registerChannel" : "MOBILE",
+         "title" : {
+            "id" : 1
          }
       }'</span>
 </code></pre>
@@ -1144,6 +1144,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
         "lastName" : "กิ๊ก",
         "birthDate" : "12/03/2015",
         "phone" : "021234567",
+        "email" : "megaspeed@example.com",
         "title" : {
                 "id" : 2
         }
@@ -1203,6 +1204,12 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>phone</td>
 <td>String</td>
 <td>Max 20 digits.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>email</td>
+<td>String</td>
+<td>Standard email format.<br/>Max 100 characters.</td>
 </tr>
 <tr>
 <td>POST</td>
