@@ -1130,6 +1130,88 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
+<h2 id="update-profile">Update Profile</h2>
+
+<blockquote>
+<p>Request Update Profile</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/update-profile
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
+  -d <span class="s1">'{
+        "firstName" : "กุ๊ก",
+        "lastName" : "กิ๊ก",
+        "birthDate" : "12/03/2015",
+        "phone" : "021234567",
+        "title" : {
+                "id" : 2
+        }
+    }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/update-profile</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>Access token from <a href="#authentication">Authentication</a></td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>firstName</td>
+<td>String</td>
+<td>Thai or English characters.<br/>Max 50 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>lastName</td>
+<td>String</td>
+<td>Thai or English characters.<br/>Max 50 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>birthDate</td>
+<td>Date</td>
+<td>Format: dd/MM/yyyy</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>phone</td>
+<td>String</td>
+<td>Max 20 digits.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>title</td>
+<td>Object</td>
+<td>See: Title Object table.</td>
+</tr>
+</tbody></table>
+
 <h2 id="upload-profile-image">Upload Profile Image</h2>
 
 <blockquote>
@@ -1228,88 +1310,6 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
-<h2 id="update-profile">Update Profile</h2>
-
-<blockquote>
-<p>Request Update Profile</p>
-</blockquote>
-<pre class="highlight shell"><code>curl https://api.cpone-dev.com/update-profile
-  -X POST
-  -H <span class="s2">"Authorization: bearer {access_token}"</span>
-  -H <span class="s2">"Content-Type: application/json"</span>
-  -d <span class="s1">'{
-        "firstName" : "กุ๊ก",
-        "lastName" : "กิ๊ก",
-        "birthDate" : "12/03/2015",
-        "phone" : "021234567",
-        "title" : {
-                "id" : 2
-        }
-    }'</span>
-</code></pre>
-
-<blockquote>
-<p>Response</p>
-</blockquote>
-
-<h3 id="request">Request</h3>
-
-<p><code class="prettyprint">POST https://api.cpone-dev.com/update-profile</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>TYPE</th>
-<th>Params</th>
-<th>Value</th>
-<th>Detail</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>HEAD</td>
-<td>Authorization</td>
-<td>String</td>
-<td>Access token from <a href="#authentication">Authentication</a></td>
-</tr>
-<tr>
-<td>HEAD</td>
-<td>Content-Type</td>
-<td>String</td>
-<td>Fix value to &ldquo;application/json&rdquo;</td>
-</tr>
-<tr>
-<td>POST</td>
-<td>firstName</td>
-<td>String</td>
-<td>Thai or English characters.<br/>Max 50 characters.</td>
-</tr>
-<tr>
-<td>POST</td>
-<td>lastName</td>
-<td>String</td>
-<td>Thai or English characters.<br/>Max 50 characters.</td>
-</tr>
-<tr>
-<td>POST</td>
-<td>birthDate</td>
-<td>Date</td>
-<td>Format: dd/MM/yyyy</td>
-</tr>
-<tr>
-<td>POST</td>
-<td>phone</td>
-<td>String</td>
-<td>Max 20 digits.</td>
-</tr>
-<tr>
-<td>POST</td>
-<td>title</td>
-<td>Object</td>
-<td>See: Title Object table.</td>
-</tr>
-</tbody></table>
-
 <h2 id="update-address">Update Address</h2>
 
 <blockquote>
@@ -1334,33 +1334,32 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </code></pre>
 
 <blockquote>
-<p>Response
-<code class="prettyprint">json
-{
-    &quot;id&quot;: 4,
-    &quot;houseNo&quot;: &quot;11/12&quot;,
-    &quot;villageNo&quot;: &quot;8&quot;,
-    &quot;buildingVillage&quot;: &quot;ตึก AIA Capital Center&quot;,
-    &quot;laneAlley&quot;: &quot;รัชดาซอย 4&quot;,
-    &quot;road&quot;: &quot;ถนนรัชดาภิเษก&quot;,
-    &quot;province&quot;: {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;กรุงเทพฯ&quot;
-    },
-    &quot;district&quot;: {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;ดินแดง&quot;
-    },
-    &quot;subDistrict&quot;: {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;ดินแดง&quot;,
-        &quot;postCode&quot;: &quot;10400&quot;
-    },
-    &quot;postCode&quot;: &quot;76543&quot;,
-    &quot;addressType&quot;: &quot;ID_CARD_ADDRESS&quot;
-}
-</code></p>
+<p>Response</p>
 </blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"houseNo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11/12"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"villageNo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"buildingVillage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ตึก AIA Capital Center"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"laneAlley"</span><span class="p">:</span><span class="w"> </span><span class="s2">"รัชดาซอย 4"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"road"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ถนนรัชดาภิเษก"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"province"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"กรุงเทพฯ"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"district"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ดินแดง"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"subDistrict"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ดินแดง"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10400"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76543"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"addressType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ID_CARD_ADDRESS"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <h3 id="request">Request</h3>
 
