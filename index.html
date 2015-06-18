@@ -1454,13 +1454,12 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <blockquote>
 <p>Request Update Email Validation</p>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.cpone-dev.com/pre-update-email
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/pre-update-email-only
   -X POST
   -H <span class="s2">"Authorization: bearer {access_token}"</span>
   -H <span class="s2">"Content-Type: application/json"</span>
   -d <span class="s1">'{
-        "email" : "a@a.com",
-        "password" : "1234"
+        "email" : "a@a.com"
     }'</span>
 </code></pre>
 
@@ -1470,7 +1469,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 
 <h3 id="request">Request</h3>
 
-<p><code class="prettyprint">POST https://api.cpone-dev.com/pre-update-email</code></p>
+<p><code class="prettyprint">POST https://api.cpone-dev.com/pre-update-email-only</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -1491,12 +1490,6 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <tr>
 <td>POST</td>
 <td>email</td>
-<td>String</td>
-<td></td>
-</tr>
-<tr>
-<td>POST</td>
-<td>password</td>
 <td>String</td>
 <td></td>
 </tr>
@@ -1507,13 +1500,12 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <blockquote>
 <p>Request Update Email</p>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.cpone-dev.com/update-email
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/update-email-only
   -X POST
   -H <span class="s2">"Authorization: bearer {access_token}"</span>
   -H <span class="s2">"Content-Type: application/json"</span>
   -d <span class="s1">'{
-        "email" : "a@a.com",
-        "password" : "1234"
+        "email" : "a@a.com"
     }'</span>
 </code></pre>
 
@@ -1523,7 +1515,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 
 <h3 id="request">Request</h3>
 
-<p><code class="prettyprint">POST https://api.cpone-dev.com/update-email</code></p>
+<p><code class="prettyprint">POST https://api.cpone-dev.com/update-email-only</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -1544,12 +1536,6 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <tr>
 <td>POST</td>
 <td>email</td>
-<td>String</td>
-<td></td>
-</tr>
-<tr>
-<td>POST</td>
-<td>password</td>
 <td>String</td>
 <td></td>
 </tr>
@@ -1605,6 +1591,112 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>otpNumber</td>
 <td>String</td>
 <td><a href="#send-otp">Send OTP</a></td>
+</tr>
+</tbody></table>
+
+<h2 id="update-email/password-via-offline-channel-validation">Update Email/Password via Offline Channel Validation</h2>
+
+<blockquote>
+<p>Request Update Email/Password via Offline Channel Validation</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/pre-email-password
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
+  -d <span class="s1">'{
+        "email" : "a@a.com",
+        "password" : "password"
+    }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/pre-email-password</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>email</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>password</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="update-email/password-via-offline-channel">Update Email/Password via Offline Channel</h2>
+
+<blockquote>
+<p>Request Update Email/Password via Offline Channel</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/update-email-password
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
+  -d <span class="s1">'{
+        "email" : "a@a.com",
+        "password" : "password"
+    }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/update-email-password</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>email</td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>password</td>
+<td>String</td>
+<td></td>
 </tr>
 </tbody></table>
 
