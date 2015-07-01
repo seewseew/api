@@ -1100,6 +1100,38 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
+<h4 id="note">Note</h4>
+
+<ul>
+<li>Case login from offline ที่ไม่ได้ กด forgot password
+{
+    &ldquo;violations&rdquo;: [
+        {
+            &ldquo;code&rdquo;: &ldquo;REQ-10064&rdquo;,
+            &ldquo;field&rdquo;: &ldquo;getCustomer.account&rdquo;,
+            &ldquo;message&rdquo;: &ldquo;Update email/password is required&rdquo;
+        }
+    ],
+    &ldquo;error&rdquo;: &ldquo;Validation Failure&rdquo;
+}</li>
+<li>Case มี email แต่ไม่ได้ forgot password
+{
+    &ldquo;violations&rdquo;: [
+        {
+            &ldquo;code&rdquo;: &ldquo;undefined&rdquo;,
+            &ldquo;field&rdquo;: &ldquo;getCustomer.account&rdquo;,
+            &ldquo;message&rdquo;: &ldquo;cpo123@mailinator.com&rdquo;
+        },
+        {
+            &ldquo;code&rdquo;: &ldquo;REQ-10084&rdquo;,
+            &ldquo;field&rdquo;: &ldquo;getCustomer.account&rdquo;,
+            &ldquo;message&rdquo;: &ldquo;Please change password&rdquo;
+        }
+    ],
+    &ldquo;error&rdquo;: &ldquo;Validation Failure&rdquo;
+}</li>
+</ul>
+
 <h2 id="get-profile-image">Get Profile Image</h2>
 
 <blockquote>
