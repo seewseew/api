@@ -1129,6 +1129,22 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
     ],
     &ldquo;error&rdquo;: &ldquo;Validation Failure&rdquo;
 }</li>
+<li>Case forgot password  ไม่มี email
+{
+    &ldquo;violations&rdquo;: [
+        {
+            &ldquo;code&rdquo;: &ldquo;undefined&rdquo;,
+            &ldquo;field&rdquo;: &ldquo;getCustomer.account&rdquo;,
+            &ldquo;message&rdquo;: &ldquo;&rdquo;
+        },
+        {
+            &ldquo;code&rdquo;: &ldquo;REQ-10164&rdquo;,
+            &ldquo;field&rdquo;: &ldquo;getCustomer.account&rdquo;,
+            &ldquo;message&rdquo;: &ldquo;Update email is required&rdquo;
+        }
+    ],
+    &ldquo;error&rdquo;: &ldquo;Validation Failure&rdquo;
+}</li>
 </ul>
 
 <h2 id="get-profile-image">Get Profile Image</h2>
