@@ -2002,6 +2002,42 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
+<h1 id="redeem">Redeem</h1>
+
+<blockquote>
+<p>Request Redeem</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/redeem/1
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response
+{&ldquo;id&rdquo;:1,&ldquo;title&rdquo;:&ldquo;Test Redeem&rdquo;,&ldquo;startDate&rdquo;:&ldquo;2015-07-06&rdquo;,&ldquo;endDate&rdquo;:null,&ldquo;point&rdquo;:500,&ldquo;limit&rdquo;:{&ldquo;id&rdquo;:1,&ldquo;limitType&rdquo;:&ldquo;DAY&rdquo;,&ldquo;limit&rdquo;:1},&ldquo;available&rdquo;:100,&ldquo;specialPackages&rdquo;:[{&ldquo;id&rdquo;:1,&ldquo;name&rdquo;:&ldquo;Chester&rsquo;s Extra&rdquo;},{&ldquo;id&rdquo;:1,&ldquo;name&rdquo;:&ldquo;Chester&rsquo;s Extra&rdquo;}],&ldquo;redeemChannels&rdquo;:[{&ldquo;id&rdquo;:1,&ldquo;name&rdquo;:&ldquo;ใช้สิทธิทันที&rdquo;}],&ldquo;cardRules&rdquo;:[{&ldquo;id&rdquo;:1,&ldquo;nameEng&rdquo;:&ldquo;Normal&rdquo;,&ldquo;nameTh&rdquo;:&ldquo;ธรรมดา&rdquo;,&ldquo;requestPurchaseAccumulate&rdquo;:0,&ldquo;startDate&rdquo;:&ldquo;2015-01-01&rdquo;,&ldquo;requestStartDate&rdquo;:&ldquo;06/07/2015&rdquo;,&ldquo;endDate&rdquo;:null,&ldquo;requestEndDate&rdquo;:null,&ldquo;cardRuleHistories&rdquo;:[{&ldquo;id&rdquo;:1,&ldquo;doActionUser&rdquo;:{&ldquo;id&rdquo;:1,&ldquo;login&rdquo;:&ldquo;admin&rdquo;,&ldquo;firstName&rdquo;:&ldquo;Admin&rdquo;,&ldquo;lastName&rdquo;:&ldquo;TomatoJuice&rdquo;,&ldquo;email&rdquo;:&ldquo;admin@cpone.com&rdquo;,&ldquo;activated&rdquo;:true,&ldquo;department&rdquo;:{&ldquo;id&rdquo;:&ldquo;DEV&rdquo;,&ldquo;name&rdquo;:&ldquo;Software Development&rdquo;},&ldquo;enabled&rdquo;:true,&ldquo;fullName&rdquo;:&ldquo;Admin TomatoJuice&rdquo;,&ldquo;username&rdquo;:&ldquo;admin&rdquo;,&ldquo;accountNonExpired&rdquo;:true,&ldquo;accountNonLocked&rdquo;:true,&ldquo;credentialsNonExpired&rdquo;:true},&ldquo;actionDate&rdquo;:&ldquo;06/07/2015&rdquo;,&ldquo;action&rdquo;:&ldquo;CREATE&rdquo;,&ldquo;message&rdquo;:&ldquo;First Card&rdquo;}],&ldquo;imageURL&rdquo;:null}],&ldquo;giftTypes&rdquo;:[{&ldquo;id&rdquo;:1,&ldquo;name&rdquo;:&ldquo;คูปองเงินสด&rdquo;}],&ldquo;dayPredicates&rdquo;:[{&ldquo;id&rdquo;:&ldquo;MON&rdquo;},{&ldquo;id&rdquo;:&ldquo;TUE&rdquo;},{&ldquo;id&rdquo;:&ldquo;WED&rdquo;},{&ldquo;id&rdquo;:&ldquo;THU&rdquo;},{&ldquo;id&rdquo;:&ldquo;FRI&rdquo;},{&ldquo;id&rdquo;:&ldquo;SAT&rdquo;},{&ldquo;id&rdquo;:&ldquo;SUN&rdquo;}]}</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/redeem/{redeemId}</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>redeemId</td>
+<td>Number</td>
+<td></td>
+</tr>
+</tbody></table>
+
       </div>
       <div class="dark-box">
       </div>
