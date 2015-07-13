@@ -1407,7 +1407,8 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
         </span><span class="s2">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10400"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76543"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"addressType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ID_CARD_ADDRESS"</span><span class="w">
+    </span><span class="s2">"addressType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ID_CARD_ADDRESS"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sameShippingAddress"</span><span class="p">:</span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1496,6 +1497,12 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>addressType</td>
 <td>String</td>
 <td>Required.<br/>Accept: ID_CARD_ADDRESS, SHIPPING_ADDRESS</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>sameShippingAddress</td>
+<td>boolean</td>
+<td>cannot be null</td>
 </tr>
 </tbody></table>
 
