@@ -2067,6 +2067,41 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 
 <p><code class="prettyprint">https://backoffice.cpone-dev.com/redeems</code></p>
 
+<h1 id="redeem-now">Redeem Now</h1>
+
+<blockquote>
+<p>Request Redeem Now</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/redeem-now
+  -X POST
+  -H <span class="s2">"Authorization: Basic Y2xpZW50OnNlY3JldA=="</span>
+  -d reward-code<span class="o">=</span>1234567890
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">https://api.cpone-dev.com/redeem-now</code></p>
+
+<h4 id="note">Note</h4>
+
+<ul>
+<li>Validate example
+{
+&ldquo;violations&rdquo;: [
+{
+  &ldquo;code&rdquo;: &ldquo;undefined&rdquo;,
+  &ldquo;field&rdquo;: &ldquo;redeemNow.reward&rdquo;,
+  &ldquo;message&rdquo;: &ldquo;may not be null&rdquo;
+}
+],
+&ldquo;error&rdquo;: &ldquo;Validation Failure&rdquo;
+}</li>
+</ul>
+
       </div>
       <div class="dark-box">
       </div>
