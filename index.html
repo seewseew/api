@@ -2074,7 +2074,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </blockquote>
 <pre class="highlight shell"><code>curl https://api.cpone-dev.com/redeem-now/1
   -X POST
-  -H <span class="s2">"Authorization: Basic Y2xpZW50OnNlY3JldA=="</span>
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
 </code></pre>
 
 <blockquote>
@@ -2104,7 +2104,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <td>HEAD</td>
 <td>Authorization</td>
 <td>String</td>
-<td>CLIENT_ID:CLIENT_SECRET base64 encrypt</td>
+<td>access token from Authentication</td>
 </tr>
 <tr>
 <td>POST</td>
