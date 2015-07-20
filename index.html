@@ -2083,30 +2083,52 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"rewardCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567890"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"timeout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"300"</span><span class="w">
-</span><span class="p">}</span><span class="err">```</span><span class="w">
-
-</span><span class="err">###</span><span class="w"> </span><span class="err">Request</span><span class="w">
-</span><span class="err">`https://api.cpone-dev.com/redeem-now/</span><span class="p">{</span><span class="err">id}`</span><span class="w">
-
-</span><span class="err">###</span><span class="w"> </span><span class="err">Query</span><span class="w"> </span><span class="err">Parameters</span><span class="w">
-</span><span class="err">TYPE</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Params</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Value</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Detail</span><span class="w">
-</span><span class="err">----</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">------</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">-----</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">------</span><span class="w">
-</span><span class="err">HEAD</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Authorization</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">String</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">CLIENT_ID:CLIENT_SECRET</span><span class="w"> </span><span class="err">base</span><span class="mi">64</span><span class="w"> </span><span class="err">encrypt</span><span class="w">
-</span><span class="err">POST</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">id</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">String</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">redeem</span><span class="w"> </span><span class="err">id</span><span class="w">
-
-</span><span class="err">####</span><span class="w"> </span><span class="err">Note</span><span class="w">
-</span><span class="err">-</span><span class="w"> </span><span class="err">Validate</span><span class="w"> </span><span class="err">example</span><span class="w">
- </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"violations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"undefined"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"redeemNow.reward"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"may not be null"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Validation Failure"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">https://api.cpone-dev.com/redeem-now/{id}</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>CLIENT_ID:CLIENT_SECRET base64 encrypt</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>id</td>
+<td>String</td>
+<td>redeem id</td>
+</tr>
+</tbody></table>
+
+<h4 id="note">Note</h4>
+
+<ul>
+<li>Validate example
+{
+&ldquo;violations&rdquo;: [
+{
+  &ldquo;code&rdquo;: &ldquo;undefined&rdquo;,
+  &ldquo;field&rdquo;: &ldquo;redeemNow.reward&rdquo;,
+  &ldquo;message&rdquo;: &ldquo;may not be null&rdquo;
+}
+],
+&ldquo;error&rdquo;: &ldquo;Validation Failure&rdquo;
+}</li>
+</ul>
 
       </div>
       <div class="dark-box">
