@@ -2072,10 +2072,9 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <blockquote>
 <p>Request Redeem Now</p>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.cpone-dev.com/redeem-now
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/redeem-now/1
   -X POST
   -H <span class="s2">"Authorization: Basic Y2xpZW50OnNlY3JldA=="</span>
-  -d reward-code<span class="o">=</span>1234567890
 </code></pre>
 
 <blockquote>
@@ -2088,8 +2087,32 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 
 <h3 id="request">Request</h3>
 
-<p><code class="prettyprint">https://api.cpone-dev.com/redeem-now</code></p>
+<p><code class="prettyprint">https://api.cpone-dev.com/redeem-now/{id}</code></p>
 </blockquote>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>CLIENT_ID:CLIENT_SECRET base64 encrypt</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>id</td>
+<td>String</td>
+<td>redeem id</td>
+</tr>
+</tbody></table>
 
 <h4 id="note">Note</h4>
 
