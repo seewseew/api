@@ -2137,8 +2137,9 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <blockquote>
 <p>Get BZB Point (Customer)</p>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.cpone-dev.com/api/log/points
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/api/log/points?type<span class="o">=</span>all&amp;month<span class="o">=</span>2015-09-01
   -X GET
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
 </code></pre>
 
 <blockquote>
@@ -2296,7 +2297,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 
 <h3 id="request">Request</h3>
 
-<p><code class="prettyprint">GET https://api.cpone-dev.com/api/log/points?type=all&amp;month=2015-09-01</code></p>
+<p><code class="prettyprint">GET https://api.cpone-dev.com/api/log/points?type={type}&amp;month={month}</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
