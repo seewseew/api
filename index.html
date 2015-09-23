@@ -2130,6 +2130,74 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 }</li>
 </ul>
 
+<h1 id="bzb">BzB</h1>
+
+<h2 id="api-1">API 1</h2>
+
+<blockquote>
+<p>Get API 1</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/public/titles
+  -X GET
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นาย"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mr."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นาง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mrs."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"นางสาว"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Ms."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"เด็กชาย"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Mstr."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MALE"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameTh"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"เด็กหญิง"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nameEn"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Miss"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">GET https://api.cpone-dev.com/public/titles</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PATH</td>
+<td>id</td>
+<td>Number</td>
+<td>The district id.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+All Sub-Districts sort by name
+</aside>
+
       </div>
       <div class="dark-box">
       </div>
