@@ -2228,8 +2228,8 @@ This will see Point that user get/use (earn/burn) point based on &ldquo;type&rdq
 <blockquote>
 <p>Get BZB Redeem (Customer)</p>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.cpone-dev.com/api/campaign/<span class="o">{</span>campaignId<span class="o">}</span>/redeem
-  -X GET
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/api/campaign/64735/redeem
+  -X POST
   -H <span class="s2">"Authorization: bearer {access_token}"</span>
 </code></pre>
 
@@ -2258,7 +2258,7 @@ This will see Point that user get/use (earn/burn) point based on &ldquo;type&rdq
 
 <h3 id="request">Request</h3>
 
-<p><code class="prettyprint">GET https://api.cpone-dev.com/api/campaign/64735/redeem</code></p>
+<p><code class="prettyprint">GET https://api.cpone-dev.com/api/campaign/{campaignId}/redeem</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
