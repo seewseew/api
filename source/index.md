@@ -492,7 +492,8 @@ TYPE | Params | Value | Detail
 HEAD | Authorization | String | Access token from [Authentication](#authentication)
 
 # Send OTP
-> Request Send OTP
+## Register Send OTP
+> Request OTP
 
 ```shell
 curl https://api.cpone-dev.com/otp/request
@@ -502,6 +503,34 @@ curl https://api.cpone-dev.com/otp/request
 
 ### Request
 `POST https://api.cpone-dev.com/otp/request`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+POST | mobile | String | Numeric 10 digits.
+
+### Response
+#### Error Example
+{
+  "violations" : [ {
+    "code" : "SIZ-10070",
+    "field" : "request.mobile",
+    "message" : "จำนวนตัวเลขเบอร์โทรศัพท์ไม่ถูกต้อง (10 หลัก)"
+  } ],
+  "error" : "Validation Failure"
+}
+
+## Forgot Password Send OTP
+> Request OTP
+
+```shell
+curl https://api.cpone-dev.com/otp/forgot-password
+  -X POST
+  -d mobile={mobile} 
+```
+
+### Request
+`POST https://api.cpone-dev.com/otp/forgot-password`
 
 ### Query Parameters
 TYPE | Params | Value | Detail
