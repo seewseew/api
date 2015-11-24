@@ -689,11 +689,7 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 
 <h1 id="send-otp">Send OTP</h1>
 
-<h2 id="register-send-otp">Register Send OTP</h2>
-
-<blockquote>
-<p>Request OTP</p>
-</blockquote>
+<p>-&gt; Request Send OTP</p>
 <pre class="highlight shell"><code>curl https://api.cpone-dev.com/otp/request
   -X POST
   -d <span class="nv">mobile</span><span class="o">={</span>mobile<span class="o">}</span> 
@@ -702,51 +698,6 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 <h3 id="request">Request</h3>
 
 <p><code class="prettyprint">POST https://api.cpone-dev.com/otp/request</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>TYPE</th>
-<th>Params</th>
-<th>Value</th>
-<th>Detail</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>POST</td>
-<td>mobile</td>
-<td>String</td>
-<td>Numeric 10 digits.</td>
-</tr>
-</tbody></table>
-
-<h3 id="response">Response</h3>
-
-<h4 id="error-example">Error Example</h4>
-
-<p>{
-  &ldquo;violations&rdquo; : [ {
-    &ldquo;code&rdquo; : &ldquo;SIZ-10070&rdquo;,
-    &ldquo;field&rdquo; : &ldquo;request.mobile&rdquo;,
-    &ldquo;message&rdquo; : &ldquo;จำนวนตัวเลขเบอร์โทรศัพท์ไม่ถูกต้อง (10 หลัก)&rdquo;
-  } ],
-  &ldquo;error&rdquo; : &ldquo;Validation Failure&rdquo;
-}</p>
-
-<h2 id="forgot-password-send-otp">Forgot Password Send OTP</h2>
-
-<blockquote>
-<p>Request OTP</p>
-</blockquote>
-<pre class="highlight shell"><code>curl https://api.cpone-dev.com/otp/forgot-password
-  -X POST
-  -d <span class="nv">mobile</span><span class="o">={</span>mobile<span class="o">}</span> 
-</code></pre>
-
-<h3 id="request">Request</h3>
-
-<p><code class="prettyprint">POST https://api.cpone-dev.com/otp/forgot-password</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
