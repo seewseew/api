@@ -498,6 +498,7 @@ HEAD | Authorization | String | Access token from [Authentication](#authenticati
 curl https://api.cpone-dev.com/otp/request
   -X POST
   -d mobile={mobile} 
+  -d type={type}
 ```
 
 ### Request
