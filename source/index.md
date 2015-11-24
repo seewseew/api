@@ -492,7 +492,7 @@ TYPE | Params | Value | Detail
 HEAD | Authorization | String | Access token from [Authentication](#authentication)
 
 # Send OTP
--> Request Send OTP
+> Request Send OTP
 
 ```shell
 curl https://api.cpone-dev.com/otp/request
