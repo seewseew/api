@@ -507,6 +507,7 @@ curl https://api.cpone-dev.com/otp/request
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 POST | mobile | String | Numeric 10 digits.
+POST | type   | String | OTP_REGISTER,OTP_FORGOT,OTP_MOBILE
 
 ### Response
 #### Error Example
