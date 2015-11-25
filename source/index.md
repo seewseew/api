@@ -815,6 +815,46 @@ POST | birthDate | Date | Format: dd/MM/yyyy
 POST | phone | String | Max 20 digits.
 POST | title | Object | See: Title Object table.
 
+## Update Profile POS
+> Request Update Profile POS
+
+```shell
+curl https://api.cpone-dev.com/update-profile-pos
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -H "Content-Type: application/json"
+  -d '{
+		"title" : {
+            		"id" : 2
+    		},
+    		"firstName" : "กุ๊ก",
+    		"lastName" : "กิ๊ก",
+    		"birthDate" : "29/11/1990",
+    		"thaiId" : "1500900130699",
+    		"email":"kookkik@gmail.com",
+    		"password":"password123New"
+	}'
+```
+
+> Response
+
+
+### Request
+`POST https://api.cpone-dev.com/update-profile-pos`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Authorization | String | Access token from [Authentication](#authentication)
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | title | Object | See: Title Object table.
+POST | firstName | String | Thai or English characters.<br/>Max 50 characters.
+POST | lastName | String | Thai or English characters.<br/>Max 50 characters.
+POST | birthDate | Date | Format: dd/MM/yyyy
+POST | thaiId | String | Numeric 13 digits.
+POST | email | String | *Optional parameter. Standard email format. Max 100 characters.
+POST | password | String | Allowed characters: A-Z, a-z, 0-9
+
 ## Upload Profile Image
 > Request Upload Profile Image
 
