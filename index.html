@@ -1363,6 +1363,102 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
+<h2 id="pre-update-profile-pos">Pre Update Profile POS</h2>
+
+<blockquote>
+<p>Request Pre Update Profile POS</p>
+</blockquote>
+<pre class="highlight shell"><code>curl https://api.cpone-dev.com/pre-update-profile-pos
+  -X POST
+  -H <span class="s2">"Authorization: bearer {access_token}"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
+  -d <span class="s1">'{
+        "title" : {
+                    "id" : 2
+            },
+            "firstName" : "กุ๊ก",
+            "lastName" : "กิ๊ก",
+            "birthDate" : "29/11/1990",
+            "thaiId" : "1500900130699",
+            "email":"kookkik@gmail.com",
+            "password":"password123New"
+    }'</span>
+</code></pre>
+
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<h3 id="request">Request</h3>
+
+<p><code class="prettyprint">POST https://api.cpone-dev.com/pre-update-profile-pos</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>TYPE</th>
+<th>Params</th>
+<th>Value</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HEAD</td>
+<td>Authorization</td>
+<td>String</td>
+<td>Access token from <a href="#authentication">Authentication</a></td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>Content-Type</td>
+<td>String</td>
+<td>Fix value to &ldquo;application/json&rdquo;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>title</td>
+<td>Object</td>
+<td>See: Title Object table.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>firstName</td>
+<td>String</td>
+<td>Thai or English characters.<br/>Max 50 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>lastName</td>
+<td>String</td>
+<td>Thai or English characters.<br/>Max 50 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>birthDate</td>
+<td>Date</td>
+<td>Format: dd/MM/yyyy</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>thaiId</td>
+<td>String</td>
+<td>Numeric 13 digits.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>email</td>
+<td>String</td>
+<td>*Optional parameter. Standard email format. Max 100 characters.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>password</td>
+<td>String</td>
+<td>Allowed characters: A-Z, a-z, 0-9</td>
+</tr>
+</tbody></table>
+
 <h2 id="upload-profile-image">Upload Profile Image</h2>
 
 <blockquote>
