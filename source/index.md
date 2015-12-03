@@ -705,7 +705,11 @@ curl https://api.cpone-dev.com/customers
 	"notificationCount": 999,
 	"lastUpdatedRedeem": "17/06/2015 09:29:09",
 	"lastUpdatedGift": "17/06/2015 09:29:09",
-	"giftCount": 999
+	"giftCount": 999,
+	"canUploadReceipt": true,
+        "displayBar": false,
+  	"displayPoint": false,
+  	"displayPointMsg": ""
 }
 ```
 
