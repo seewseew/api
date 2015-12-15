@@ -654,6 +654,131 @@ TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 POST | id | Number | 1=Mr. 2=Mrs. 3=Ms. 4=Mstr. 5=Miss
 
+## Register Mobile Validation
+
+> Request Send Register Data
+
+```shell
+curl https://api.cpone-dev.com/customers/pre-register-mobile
+  -X POST
+  -H "Content-Type: application/json"
+  -d '{
+         "thaiId" : "3670301396484",
+         "email" : "megaspeed@example.com",
+         "mobile" : "0879630303",
+         "firstName" : "กุ๊ก",
+         "lastName" : "กิ๊ก",
+         "birthDate" : "03/04/2015",
+         "registerChannel" : "MOBILE",
+         "title" : {
+            "id" : 1
+         }
+      }'
+```
+
+> Response
+
+
+### Request
+`POST https://api.cpone-dev.com/customers/pre-register-mobile`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | thaiId | String | Numeric 13 digits.
+POST | email | String | *Optional parameter.<br/>Standard email format.<br/>Max 100 characters.
+POST | mobile | String | Numeric 10 digits.
+POST | firstName | String | Thai or English characters.<br/>Max 50 characters.
+POST | lastName | String | Thai or English characters.<br/>Max 50 characters.
+POST | birthDate | Date | Format: dd/MM/yyyy
+POST | registerChannel | String | Accept: MOBILE, WEB, CALL
+POST | title | Object | See: Title Object table.
+
+### Title Object
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+POST | id | Number | 1=Mr. 2=Mrs. 3=Ms. 4=Mstr. 5=Miss
+
+## Register Mobile
+
+> Request Send Register Data
+
+```shell
+curl https://api.cpone-dev.com/customers/register-mobile
+  -X POST
+  -H "Content-Type: application/json"
+  -d '{
+         "otpNumber":"{otpNumber}",
+         "thaiId":"3670301396484",
+         "email":"megaspeed@example.com",
+         "mobile":"0879630303",
+         "firstName":"ฝอย",
+         "lastName":"ขัดหม้อ",
+         "birthDate":"03/04/2015",
+         "registerChannel":"MOBILE",
+         "title":{
+            "id":1
+         }
+      }'
+```
+
+> Response
+
+```json
+{
+    "id": 33,
+    "thaiId": "3670301396484",
+    "email": "megaspeed@example.com",
+    "mobile": "0879630303",
+    "firstName": "ฝอย",
+    "lastName": "ขัดหม้อ",
+    "title": {
+        "id": 1,
+        "nameTh": "นาย",
+        "nameEn": "Mr.",
+        "gender": "MALE"
+    },
+    "birthDate": "03/04/2015",
+    "registerChannel": "MOBILE",
+    "phone": null,
+    "addresses": [],
+    "cpOneCard": {
+        "id": 33,
+        "cardNumber": "0001000000000033",
+        "cardRule": {
+        	"nameEng": "Normal",
+        	"nameTh": "ธรรมดา"
+      	},
+        "expiryDate": "25/06/2015",
+      	"accumulateAmount": 0,
+      	"maxAccumulateAmount": 20000
+    }
+}
+```
+
+### Request
+`POST https://api.cpone-dev.com/customers/register-mobile`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | otpNumber | String | [Send OTP](#send-otp)
+POST | thaiId | String | Numeric 13 digits.
+POST | email | String | *Optional parameter.<br/>Standard email format.<br/>Max 100 characters.
+POST | mobile | String | Numeric 10 digits.
+POST | firstName | String | Thai or English characters.<br/>Max 50 characters.
+POST | lastName | String | Thai or English characters.<br/>Max 50 characters.
+POST | birthDate | Date | Format: dd/MM/yyyy
+POST | registerChannel | String | Accept: MOBILE,WEB,CALL
+POST | title | Object | See: Title Object table.
+
+### Title Object
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+POST | id | Number | 1=Mr. 2=Mrs. 3=Ms. 4=Mstr. 5=Miss
+
 ## Get Profile
 > Request Get Profile
 
