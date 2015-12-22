@@ -1676,3 +1676,18 @@ POST | campaignId | String | Campaign id (e.g. 64735)
 <aside class="notice">
 This function will be called on campaign redemption. Please note that it will not be used for Type-Buy Campaign.
 </aside>
+
+# CMS
+## Fetch Campaign
+> Fetch Campaign
+
+```shell
+curl https://backoffice.cpone-dev.com/api/campaigns/fetch
+  -X GET
+```
+
+> Response
+HTTP 200 OK
+
+### Request
+`GET https://backoffice.cpone-dev.com/api/campaigns/fetch`
