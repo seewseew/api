@@ -1338,24 +1338,79 @@ curl https://api.cpone-dev.com/inboxs/customer
 
 ```json
 {
-  "hasNext": false,
-  "size": 20,
-  "content": [
-    {
-      "id": 4,
-      "title": "โปรโมชั่น 7-eleven (7-11 เซเว่น อีเลฟเว่น) ประจำเดือนกันยายน 2558",
-      "sentDate": "21/10/2015 17:56:07"
-    }
-  ],
-  "hasPrevious": false,
-  "number": 0,
-  "sort": null,
-  "last": true,
-  "hasContent": true,
-  "totalElements": 1,
-  "first": true,
-  "totalPages": 1,
-  "numberOfElements": 1
+  "page": {
+    "sort": null,
+    "first": true,
+    "totalPages": 1,
+    "last": true,
+    "totalElements": 7,
+    "numberOfElements": 7,
+    "hasContent": true,
+    "hasNext": false,
+    "size": 20,
+    "content": [
+      {
+        "id": 8211,
+        "title": "ทดสอบNoti android2",
+        "detail": "ทดสอบNoti android2",
+        "sentDate": "09/03/2016 14:02:17",
+        "hasRead": false,
+        "activated": true
+      },
+      {
+        "id": 8433,
+        "title": "Test Read inbox",
+        "detail": "Test Read inbox",
+        "sentDate": "09/03/2016 14:18:06",
+        "hasRead": false,
+        "activated": true
+      },
+      {
+        "id": 8338,
+        "title": "Test Notification and Inbox",
+        "detail": "Test Notification and Inbox",
+        "sentDate": "09/03/2016 14:13:56",
+        "hasRead": false,
+        "activated": true
+      },
+      {
+        "id": 8217,
+        "title": "ทดสอบส่งข้อความ1",
+        "detail": "ทดสอบส่งข้อความ1",
+        "sentDate": "09/03/2016 14:06:30",
+        "hasRead": false,
+        "activated": true
+      },
+      {
+        "id": 8220,
+        "title": "ทดสอบ send Notification",
+        "detail": "ทดสอบ send Notification",
+        "sentDate": "09/03/2016 14:09:37",
+        "hasRead": false,
+        "activated": true
+      },
+      {
+        "id": 8214,
+        "title": "ทดสอบNoti android",
+        "detail": "ทดสอบNoti android",
+        "sentDate": "09/03/2016 14:03:24",
+        "hasRead": false,
+        "activated": true
+      },
+      {
+        "id": 7752,
+        "title": "ยินดีต้อนรับสู่ CP Surprise",
+        "detail": "ขอขอบคุณที่ท่านสมัครสมาชิก CP Surprise กับเราค่ะ ท่านสามารถเข้าสู่บริการ และรับสิทธิประโยชน์ต่างๆ ของเรา โดยใช้เบอร์มือถือหรือหมายเลขบัตรประชาชนของท่าน",
+        "sentDate": "03/03/2016 13:06:57",
+        "hasRead": true,
+        "activated": true
+      }
+    ],
+    "hasPrevious": false,
+    "number": 0
+  },
+  "unreadInboxCount": 6,
+  "totalInboxCount": 7
 }
 ```
 
@@ -1392,6 +1447,116 @@ TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 GET | inboxId | Number | Inbox ID
 
+## Get Read Inbox
+> Request Get Read Inbox
+
+```shell
+   curl https://api.cpone-dev.com/inboxs/7752/read
+  -X POST
+  -H "Authorization: bearer {access_token}"
+```
+
+> Response
+
+```json
+{
+  "unreadInboxCount": 6,
+  "totalInboxCount": 7
+}
+```
+
+### Request
+`POST https://api.cpone-dev.com/inboxs/{inboxId}/read`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+POST | inboxId | Number | Inbox ID
+
+## Get Read Detail Inbox
+> Request Get Read Detail Inbox
+
+```shell
+   curl https://api.cpone-dev.com/inboxs/7401/read
+  -X GET
+  -H "Authorization: bearer {access_token}"
+```
+
+> Response
+
+```json
+{
+  "id": 7752,
+  "title": "ยินดีต้อนรับสู่ CP Surprise",
+  "detail": "ขอขอบคุณที่ท่านสมัครสมาชิก CP Surprise กับเราค่ะ ท่านสามารถเข้าสู่บริการ และรับสิทธิประโยชน์ต่างๆ ของเรา โดยใช้เบอร์มือถือหรือหมายเลขบัตรประชาชนของท่าน",
+  "sentDate": "03/03/2016 13:06:57",
+  "hasRead": true,
+  "imageUrl": "",
+  "activated": true
+}
+```
+
+### Request
+`GET https://api.cpone-dev.com/inboxs/{inboxId}/read`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+GET | inboxId | Number | Inbox ID
+
+## Post Delete Inbox
+> Request Post Delete Inbox
+
+```shell
+   curl https://api.cpone-dev.com/inboxs/7752/inactive
+  -X POST
+  -H "Authorization: bearer {access_token}"
+```
+
+> Response
+
+```json
+{
+  "unreadInboxCount": 6,
+  "totalInboxCount": 6
+}
+```
+
+### Request
+`POST https://api.cpone-dev.com/inboxs/{inboxId}/inactive`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+POST | inboxId | Number | Inbox ID
+
+## Post Delete Multi Inbox
+> Request Post Delete Multi Inbox
+
+```shell
+   curl https://api.cpone-dev.com/inboxs/inactives
+  -X POST
+  -H "Authorization: bearer {access_token}"
+  -d '[inboxId,inboxId,inboxId,inboxId]'
+```
+
+> Response
+
+```json
+{
+  "unreadInboxCount": 6,
+  "totalInboxCount": 6
+}
+```
+
+### Request
+`POST https://api.cpone-dev.com/inboxs/inactives`
+
+### Query Parameters
+TYPE | Params | Value | Detail
+---- | ------ | ----- | ------
+HEAD | Content-Type | String | Fix value to "application/json"
+POST | inboxId | Number | Inbox ID
 
 # Forgot Password
 ## Find Mobile
