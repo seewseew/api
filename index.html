@@ -2432,10 +2432,10 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </tr>
 </tbody></table>
 
-<h2 id="get-read-inbox">Get Read Inbox</h2>
+<h2 id="post-read-inbox">Post Read Inbox</h2>
 
 <blockquote>
-<p>Request Get Read Inbox</p>
+<p>Request Post Read Inbox</p>
 </blockquote>
 <pre class="highlight shell"><code>   curl https://api.cpone-dev.com/inboxs/7752/read
   -X POST
@@ -2467,52 +2467,6 @@ You must replace <code>{client_id}</code> and <code>{client_secret}</code> with 
 </thead><tbody>
 <tr>
 <td>POST</td>
-<td>inboxId</td>
-<td>Number</td>
-<td>Inbox ID</td>
-</tr>
-</tbody></table>
-
-<h2 id="get-read-detail-inbox">Get Read Detail Inbox</h2>
-
-<blockquote>
-<p>Request Get Read Detail Inbox</p>
-</blockquote>
-<pre class="highlight shell"><code>   curl https://api.cpone-dev.com/inboxs/7401/read
-  -X GET
-  -H <span class="s2">"Authorization: bearer {access_token}"</span>
-</code></pre>
-
-<blockquote>
-<p>Response</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7752</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ยินดีต้อนรับสู่ CP Surprise"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ขอขอบคุณที่ท่านสมัครสมาชิก CP Surprise กับเราค่ะ ท่านสามารถเข้าสู่บริการ และรับสิทธิประโยชน์ต่างๆ ของเรา โดยใช้เบอร์มือถือหรือหมายเลขบัตรประชาชนของท่าน"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sentDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03/03/2016 13:06:57"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"hasRead"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"imageUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"activated"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<h3 id="request">Request</h3>
-
-<p><code class="prettyprint">GET https://api.cpone-dev.com/inboxs/{inboxId}/read</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>TYPE</th>
-<th>Params</th>
-<th>Value</th>
-<th>Detail</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>GET</td>
 <td>inboxId</td>
 <td>Number</td>
 <td>Inbox ID</td>
