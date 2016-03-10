@@ -1447,8 +1447,8 @@ TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 GET | inboxId | Number | Inbox ID
 
-## Get Read Inbox
-> Request Get Read Inbox
+## Post Read Inbox
+> Request Post Read Inbox
 
 ```shell
    curl https://api.cpone-dev.com/inboxs/7752/read
@@ -1472,37 +1472,6 @@ GET | inboxId | Number | Inbox ID
 TYPE | Params | Value | Detail
 ---- | ------ | ----- | ------
 POST | inboxId | Number | Inbox ID
-
-## Get Read Detail Inbox
-> Request Get Read Detail Inbox
-
-```shell
-   curl https://api.cpone-dev.com/inboxs/7401/read
-  -X GET
-  -H "Authorization: bearer {access_token}"
-```
-
-> Response
-
-```json
-{
-  "id": 7752,
-  "title": "ยินดีต้อนรับสู่ CP Surprise",
-  "detail": "ขอขอบคุณที่ท่านสมัครสมาชิก CP Surprise กับเราค่ะ ท่านสามารถเข้าสู่บริการ และรับสิทธิประโยชน์ต่างๆ ของเรา โดยใช้เบอร์มือถือหรือหมายเลขบัตรประชาชนของท่าน",
-  "sentDate": "03/03/2016 13:06:57",
-  "hasRead": true,
-  "imageUrl": "",
-  "activated": true
-}
-```
-
-### Request
-`GET https://api.cpone-dev.com/inboxs/{inboxId}/read`
-
-### Query Parameters
-TYPE | Params | Value | Detail
----- | ------ | ----- | ------
-GET | inboxId | Number | Inbox ID
 
 ## Post Delete Inbox
 > Request Post Delete Inbox
